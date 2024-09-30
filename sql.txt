@@ -1,0 +1,29 @@
+Data Retrieval: Write SQL queries to retrieve relevant data based on your problem definition.
+    Retrieve all healthcare facilities and their associated regions
+
+        SELECT Facilities.facility_name, Regions.region_name, Regions.is_rural, Facilities.number_of_beds
+FROM Facilities
+JOIN Regions ON Facilities.region_id = Regions.region_id;
+
+
+Data Analysis: Write SQL queries to analyze data and generate insights related to your SDG problem.
+
+    Identify rural regions with no healthcare facilities
+
+        SELECT Regions.region_name FROM Regions
+        LEFT JOIN Facilities ON Regions.region_id = Facilities.region_id
+        WHERE Facilities.facility_id IS NULL AND Regions.is_rural = TRUE;
+
+
+
+Document the process of importing data into Excel and ensuring consistency.
+        
+        Step 1: Prepare Data for Export
+        Step 2: Import Data into Excel
+        Step 3: Ensuring Data Consistency in Excel
+        Step 4: Data Analysis and Pivot Tables
+        
+
+
+
+    
